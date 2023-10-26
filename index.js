@@ -28,7 +28,6 @@
     .then(text => {
       const parser = new DOMParser();
       const doc = parser.parseFromString(text, 'text/html');
-      // Preserving the SSO container
       const dashboard = document.querySelector("#dashboard feed-container");
       const main = doc.querySelector('main');
       if (dashboard && main) dashboard.replaceWith(main);
